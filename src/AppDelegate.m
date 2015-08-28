@@ -1,13 +1,6 @@
-//
-//  AppDelegate.m
-//  MG
-//
-//  Created by Tim Debo on 5/19/14.
-//
-//
-
 #import "AppDelegate.h"
 #import "WindowController.h"
+#import "GoURLProtocol.h"
 
 @implementation AppDelegate
 
@@ -25,6 +18,7 @@
 }
 
 - (void) applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [NSURLProtocol registerClass:[GoURLProtocol class]];
     self.windowController = [[WindowController alloc] initWithURL: kStartPage];
     [self.windowController setWindowParams];
     [self.windowController showWindow:self];

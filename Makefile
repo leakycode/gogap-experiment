@@ -1,6 +1,6 @@
 APP=Cocoa\ Go
 APPDIR=bin/$(APP).app
-GOSRC=src/header.h src/c_funcs.c src/do_button.c src/exported.go src/main.go
+GOSRC=src/main.go
 CC=clang
 TEMPXIB=tmp.xib
 
